@@ -1,16 +1,15 @@
 #!/bin/bash
 #Install script
 clear
-echo "Installing main programs"
-sleep 10s
+echo "Installing programs"
 sudo apt update
 sudo apt install gparted
-sudo apt install vine
+sudo apt install wine
 sudo apt install screenfetch
 sudo apt install vlc
-sudo apt install nautilus
-sudo apt install nautilus-share
-sudo apt install samba
+sudo apt install rhythmbox
+sudo apt install gimp
+sudo apt install kdenlive
 sudo apt install ssh
 
 #Installing f.lux
