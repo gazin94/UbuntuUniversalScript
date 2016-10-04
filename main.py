@@ -5,7 +5,7 @@ link: https://pypi.python.org/pypi/curses-menu/0.5.0
 Need: Python 2.7, 3.3, 3.4, and 3.5
 
     Read me!!:
-Ubuntu need pakages:
+Ubuntu need packages:
 pip3(sudo apt-get install python3-pip)
 pip install curses-menu
 pip3 install curses-menu(Python3+)
@@ -43,7 +43,8 @@ update = CommandItem("Update paсkages", "sudo apt update")
 upgrade = CommandItem("Upgrade paсkages", "sudo apt upgrade")
 autoremove = CommandItem("Autoremove paсkages", "sudo apt autoremove")
 remove_kernel = CommandItem("Remove other kernel`s", "bash bash/remove_kernel.sh")
-pickings = CommandItem("Cleaning pickings removed paсkages", "sudo dpkg -l | awk '/^rc/ {print $2}' | xargs sudo dpkg --purge")
+pickings = CommandItem("Cleaning pickings removed paсkages",
+                       "sudo dpkg -l | awk '/^rc/ {print $2}' | xargs sudo dpkg --purge")
 
 # Відображення підменю
 soft = SubmenuItem("Install soft", soft.menu, menu)
