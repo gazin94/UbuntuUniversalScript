@@ -1,3 +1,5 @@
-Install pip3: sudo apt-get install python3-pip
-Install curses-menu: pip3 install curses-menu
-Run command: bash run.sh or ./run.sh
+    Ubuntu Universal Script
+This is console menu basic options from:
+ ubuntu and and needed program from me
+ bash script configuration
+ command remove not need software
