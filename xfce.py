@@ -22,7 +22,7 @@ notes = CommandItem("Remove XFCE4-Notes", "sudo apt autoremove xfce4-notes")
 pidgin = CommandItem("Remove Pidgin", "sudo apt autoremove pidgin")
 thunderbird = CommandItem("Remove Thunderbird", "sudo apt autoremove thunderird")
 parole = CommandItem("Remove Parole", "sudo apt autoremove parole")
-gnome_sudoku = CommandItem("Remove Sudoku", "sudo apt autoremove gonome-sudoku")
+gnome_sudoku = CommandItem("Remove Sudoku", "sudo apt autoremove gnome-sudoku")
 gnome_mines = CommandItem("Remove Mines", "sudo apt autoremove gnome-mines")
 firefox = CommandItem("Remove firefox", "sudo apt autoremove firefox")
 
