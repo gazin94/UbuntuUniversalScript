@@ -29,15 +29,18 @@ from cursesmenu.items import CommandItem, SubmenuItem
 from os import getlogin
 
 # Класи дій для підменю
-import soft
-import ssh
-import ssh_X
-import remove
-import xfce
-
+# import soft
+# import ssh
+# import ssh_X
+# import remove
+# import xfce
+from modules import InstallSoft as soft
+from modules import RemoveProgram as remove
+from modules import SSH as ssh
+from modules import SshX as ssh_X
+from modules import Xfce as xfce
 # Створення основного меню
-menu = CursesMenu("Ubuntu universal script", "Hello "+str(getlogin()))
-
+menu = CursesMenu("\033[31m Ubuntu universal script \033[31m ", "Hello "+str(getlogin()))
 # Створення основних пунктів
 update = CommandItem("Update paсkages", "sudo apt update")
 upgrade = CommandItem("Upgrade paсkages", "sudo apt upgrade")
@@ -60,7 +63,8 @@ menu.append_item(autoremove)
 menu.append_item(pickings)
 menu.append_item(remove_kernel)
 menu.append_item(soft)
-menu.append_item(xfce)
+menu.append_item(soft)
+menu.append_item(remove)
 menu.append_item(SSH)
 menu.append_item(SSH_X)
 
