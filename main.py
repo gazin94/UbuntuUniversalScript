@@ -70,3 +70,6 @@ menu.append_item(SSH_X)
 
 # Показ меню
 menu.show()
+
+
+
