@@ -18,10 +18,9 @@ menu.show() - Показує меню в термніналі для підме�
 #
 
 # Класи для створення меню
-from os import getlogin
-
 from cursesmenu import CursesMenu
 from cursesmenu.items import CommandItem, SubmenuItem
+import platform
 
 from modules import InstallSoft as soft
 from modules import RemoveProgram as remove
@@ -30,36 +29,28 @@ from modules import SshX as ssh_X
 from modules import Xfce as xfce
 
 # Створення основного меню
-menu = CursesMenu("Ubuntu universal script", "Hello " + str(getlogin()))
+menu = CursesMenu("Ubuntu universal script", platform.version())
 # Створення основних пунктів
-update = CommandItem("Update paсkages", "sudo apt update")
-upgrade = CommandItem("Upgrade paсkages", "sudo apt upgrade")
-autoremove = CommandItem("Autoremove paсkages", "sudo apt autoremove")
-remove_kernel = CommandItem("Remove other kernel`s", "bash bash/remove_kernel.sh")
-pickings = CommandItem("Cleaning pickings removed paсkages",
-                       "sudo dpkg -l | awk '/^rc/ {print $2}' | xargs sudo dpkg --purge")
+_menu_items = [
+    CommandItem("Update paсkages", "sudo apt update"),
+    CommandItem("Upgrade paсkages", "sudo apt upgrade"),
+    CommandItem("Autoremove paсkages", "sudo apt autoremove"),
+    CommandItem("Remove other kernel`s", "bash bash/remove_kernel.sh"),
+    CommandItem("Cleaning pickings removed paсkages",
+                "sudo dpkg -l | awk '/^rc/ {print $2}' | xargs sudo dpkg --purge"),
 
-# Відображення підменю
-soft = SubmenuItem("Install soft", soft.menu, menu)
-remove = SubmenuItem("Remove software", remove.menu, menu)
-xfce = SubmenuItem("Xfce soft", xfce.menu, menu)
-SSH = SubmenuItem("SSH Connect", ssh.menu, menu)
-SSH_X = SubmenuItem("SSH connect with X-window support", ssh_X.menu, menu)
+    # Відображення підменю
+
+    SubmenuItem("Install soft", soft.menu, menu),
+    SubmenuItem("Remove software", remove.menu, menu),
+    SubmenuItem("Xfce soft", xfce.menu, menu),
+    SubmenuItem("SSH Connect", ssh.menu, menu),
+    SubmenuItem("SSH connect with X-window support", ssh_X.menu, menu)
+]
 
 # Додавання пунктів до основного меню
-menu.append_item(update)
-menu.append_item(upgrade)
-menu.append_item(autoremove)
-menu.append_item(pickings)
-menu.append_item(remove_kernel)
-menu.append_item(soft)
-menu.append_item(soft)
-menu.append_item(remove)
-menu.append_item(SSH)
-menu.append_item(SSH_X)
+for item in _menu_items:
+    menu.append_item(item)
 
 # Показ меню
 menu.show()
-
-
-
