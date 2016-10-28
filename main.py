@@ -4,12 +4,6 @@ Thanks pmbarrett314 from curses-menu 0.5
 link: https://pypi.python.org/pypi/curses-menu/0.5.0
 Need: Python 2.7, 3.3, 3.4, and 3.5
 
-    Read me!!:
-Ubuntu need packages:
-pip3(sudo apt-get install python3-pip)
-pip install curses-menu
-pip3 install curses-menu(Python3+)
-
     Поясенння:
 CurseMenu("Назва меню/підменю", "Підназва") - Створює основне меню
 CommandItem("Назва","Команда") - Створюэ пункт меню який виконуэ консльну команду
