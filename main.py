@@ -24,23 +24,19 @@ menu.show() - Показує меню в термніналі для підме�
 #
 
 # Класи для створення меню
-from cursesmenu import CursesMenu
-from cursesmenu.items import CommandItem, SubmenuItem
 from os import getlogin
 
-# Класи дій для підменю
-# import soft
-# import ssh
-# import ssh_X
-# import remove
-# import xfce
+from cursesmenu import CursesMenu
+from cursesmenu.items import CommandItem, SubmenuItem
+
 from modules import InstallSoft as soft
 from modules import RemoveProgram as remove
 from modules import SSH as ssh
 from modules import SshX as ssh_X
 from modules import Xfce as xfce
+
 # Створення основного меню
-menu = CursesMenu("\033[31m Ubuntu universal script \033[31m ", "Hello "+str(getlogin()))
+menu = CursesMenu("Ubuntu universal script", "Hello " + str(getlogin()))
 # Створення основних пунктів
 update = CommandItem("Update paсkages", "sudo apt update")
 upgrade = CommandItem("Upgrade paсkages", "sudo apt upgrade")
