@@ -1,3 +1,3 @@
+.idea/
 
-.idea
-main_env
+Буде вилучено __pycache__/
