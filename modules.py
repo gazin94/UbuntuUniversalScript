@@ -50,16 +50,16 @@ class InstallSoft:
 
     # Пункти меню
     _menu_items = [
-    CommandItem("All software", "bash bash/install.sh"),
-    CommandItem("ssh", "sudo apt install ssh"),
-    CommandItem("Gparted", "sudo apt install gparted"),
-    CommandItem("VLC", "sudo apt install vlc"),
-    CommandItem("screenfetch", "sudo apt install screenfetch"),
-    CommandItem("f.lux", "bash bash/f.lux.sh"),
-    CommandItem("gimp", "sudo apt install gimp"),
-    CommandItem("Kdenlive", "sudo apt install kdenlive"),
-    CommandItem("Wine", "sudo apt install wine"),
-    CommandItem("Rhythmbox", "sudo apt install rhythmbox")
+        CommandItem("All software", "bash bash/install.sh"),
+        CommandItem("ssh", "sudo apt install ssh"),
+        CommandItem("Gparted", "sudo apt install gparted"),
+        CommandItem("VLC", "sudo apt install vlc"),
+        CommandItem("screenfetch", "sudo apt install screenfetch"),
+        CommandItem("f.lux", "bash bash/f.lux.sh"),
+        CommandItem("gimp", "sudo apt install gimp"),
+        CommandItem("Kdenlive", "sudo apt install kdenlive"),
+        CommandItem("Wine", "sudo apt install wine"),
+        CommandItem("Rhythmbox", "sudo apt install rhythmbox")
     ]
 
     # Додавання пунктів до меню
@@ -79,11 +79,11 @@ class SSH:
 
     # Пунктии меню
     _menu_items = [
-    CommandItem("DIR 615-E4", "ssh root@192.168.15.25"),
-    CommandItem("Home ms-7519(ivan)", "ssh ivan@192.168.15.102"),
-    CommandItem("Acer-aspire V5-131(ivan)", "ssh ivan@192.168.15.103"),
-    CommandItem("Lenovo B560(diana)", "ssh ivan@192.168.15.105"),
-    CommandItem("Server(home)", "ssh ivan@192.168.15.106")
+        CommandItem("DIR 615-E4", "ssh root@192.168.15.25"),
+        CommandItem("Home ms-7519(ivan)", "ssh ivan@192.168.15.102"),
+        CommandItem("Acer-aspire V5-131(ivan)", "ssh ivan@192.168.15.103"),
+        CommandItem("Lenovo B560(diana)", "ssh ivan@192.168.15.105"),
+        CommandItem("Server(home)", "ssh ivan@192.168.15.106")
     ]
 
     # Додавання пунктів до меню
@@ -102,10 +102,10 @@ class SshX:
 
     # Пункти
     _menu_items = [
-    CommandItem("Home ms-7519(ivan)", "ssh -X ivan@192.168.15.102"),
-    CommandItem("Acer-aspire V5-131(ivan)", "ssh -X ivan@192.168.15.103"),
-    CommandItem("Lenovo B560(diana)", "ssh -X ivan@192.168.15.105"),
-    CommandItem("Server(home)", "ssh -X ivan@192.168.15.106")
+        CommandItem("Home ms-7519(ivan)", "ssh -X ivan@192.168.15.102"),
+        CommandItem("Acer-aspire V5-131(ivan)", "ssh -X ivan@192.168.15.103"),
+        CommandItem("Lenovo B560(diana)", "ssh -X ivan@192.168.15.105"),
+        CommandItem("Server(home)", "ssh -X ivan@192.168.15.106")
     ]
 
     #  Додаваня пунктів до меню
@@ -125,14 +125,14 @@ class Xfce:
 
     # Пункти меню
     _menu_items = [
-    CommandItem("All remove", "bash bash/xfce.sh"),
-    CommandItem("Remove XFCE4-Notes", "sudo apt autoremove xfce4-notes"),
-    CommandItem("Remove Pidgin", "sudo apt autoremove pidgin"),
-    CommandItem("Remove Thunderbird", "sudo apt autoremove thunderird"),
-    CommandItem("Remove Parole", "sudo apt autoremove parole"),
-    CommandItem("Remove Sudoku", "sudo apt autoremove gnome-sudoku"),
-    CommandItem("Remove Mines", "sudo apt autoremove gnome-mines"),
-    CommandItem("Remove firefox", "sudo apt autoremove firefox")
+        CommandItem("All remove", "bash bash/xfce.sh"),
+        CommandItem("Remove XFCE4-Notes", "sudo apt autoremove xfce4-notes"),
+        CommandItem("Remove Pidgin", "sudo apt autoremove pidgin"),
+        CommandItem("Remove Thunderbird", "sudo apt autoremove thunderird"),
+        CommandItem("Remove Parole", "sudo apt autoremove parole"),
+        CommandItem("Remove Sudoku", "sudo apt autoremove gnome-sudoku"),
+        CommandItem("Remove Mines", "sudo apt autoremove gnome-mines"),
+        CommandItem("Remove firefox", "sudo apt autoremove firefox")
     ]
 
     # Додавання пунктів до меню
